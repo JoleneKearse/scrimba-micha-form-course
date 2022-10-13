@@ -1,0 +1,38 @@
+/* ---------- RESET ----------*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-image: url("https://images.unsplash.com/photo-1590708622734-b1b8df3c3576?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVjdGlibGVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+h1 {
+  background-color: rgb(29, 27, 39);
+  color: rgb(240, 230, 230);
+  padding: .2em .8em;
+  border: 1px solid rgb(240, 230, 230);
+  border-radius: 6px;
+}
+
+form {
+  background-color: rgb(29, 27, 39);
+  color: rgb(240, 230, 230);
+  border: 1px solid rgb(240, 230, 230);
+  border-radius: 6px;
+  width: 70%;
+  height: 400px;
+}
