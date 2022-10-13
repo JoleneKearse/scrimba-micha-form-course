@@ -92,6 +92,11 @@ fieldset {
   box-shadow: .05rem .5rem 2rem var(--clr-accent);
 }
 
+#theme {
+  margin-bottom: var(--gap-lg);
+  padding: var(--gap-sm);
+}
+
 .radio-box {
   display: grid;
   grid-template-areas: "label radio";
