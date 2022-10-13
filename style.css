@@ -20,6 +20,13 @@ body {
   
 }
 
+label,
+input {
+  font: inherit;
+}
+
+/* ---------- TYPOGRAPHY ----------*/
+
 h1 {
   background-color: rgb(29, 27, 39);
   color: rgb(240, 230, 230);
@@ -28,11 +35,30 @@ h1 {
   border-radius: 6px;
 }
 
+/* ---------- LAYOUT ----------*/
+
 form {
+  display: inline-block;
+  width: 70%;
+  height: 400px;
+  padding: 1em;
   background-color: rgb(29, 27, 39);
   color: rgb(240, 230, 230);
   border: 1px solid rgb(240, 230, 230);
   border-radius: 6px;
+}
+
+label {
+  display: grid;
+  grid-template-areas: 'label form form form form form form form form form form';
+  grid-template-columns: repeat(5, 1fr);
+  grid-area: label;
   width: 70%;
-  height: 400px;
+}
+
+input {
+  grid-area: form;
+  margin-inline: auto;
+  margin-bottom: 1em;
+  padding: .25em;
 }
