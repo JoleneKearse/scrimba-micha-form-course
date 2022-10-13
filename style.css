@@ -1,3 +1,8 @@
+/* ---------- CUSTOM PROPERTIES ----------*/
+:root {
+  --border-radius: .25em;
+}
+
 /* ---------- RESET ----------*/
 
 *,
@@ -21,32 +26,44 @@ body {
 }
 
 label,
-input {
+input,
+placeholder {
   font: inherit;
 }
 
 /* ---------- TYPOGRAPHY ----------*/
 
 h1 {
-  padding: .2em .8em;
-  border: 1px solid rgb(240, 230, 230);
-  border-radius: 6px;
-  background-color: rgb(29, 27, 39);
   color: rgb(240, 230, 230);
+}
+
+form {
+  color: rgb(240, 230, 230);
+}
+
+legend {
+  font-size: 1.25rem;
 }
 
 /* ---------- LAYOUT ----------*/
 
+h1 {
+  margin: 1em 0;
+  padding: .2em .8em;
+  border: .25rem solid rgb(240, 230, 230);
+  border-radius: var(--border-radius);
+  background-color: rgb(29, 27, 39);
+  outline: .25rem solid #b7291a;
+}
+
 form {
-  /* display: inline-block; */
   width: 70%;
   height: 400px;
   padding: 1em;
   background-color: rgb(29, 27, 39);
-  color: rgb(240, 230, 230);
-  border: 1px solid rgb(240, 230, 230);
-  border-radius: 6px;
-  outline: 1px solid violet;
+  border: .25rem solid rgb(240, 230, 230);
+  border-radius: var(--border-radius);
+  outline: .25rem solid #b7291a;
 }
 
 .general-info {
@@ -67,7 +84,11 @@ input {
 fieldset {
   width: 50%;
   margin-inline: auto;
+  border: .05rem solid #b7291a;
+  border-radius: var(--border-radius);
+  box-shadow: .05rem .5rem 2rem #b7291a;
 }
+
 .radio-box {
   display: grid;
   grid-template-areas: "label radio";
