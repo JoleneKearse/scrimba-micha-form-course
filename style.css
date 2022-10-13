@@ -1,6 +1,9 @@
 /* ---------- CUSTOM PROPERTIES ----------*/
 :root {
   --border-radius: .25em;
+  --clr-neutral-100: rgb(240, 230, 230);
+  --clr-neutral-900: rgb(29, 27, 39);
+  --clr-accent: #b7291a;
 }
 
 /* ---------- RESET ----------*/
@@ -33,16 +36,13 @@ placeholder {
 
 /* ---------- TYPOGRAPHY ----------*/
 
-h1 {
-  color: rgb(240, 230, 230);
-}
-
+h1, 
 form {
-  color: rgb(240, 230, 230);
+  color: var(--clr-neutral-100);
 }
 
 legend {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 /* ---------- LAYOUT ----------*/
@@ -50,20 +50,20 @@ legend {
 h1 {
   margin: 1em 0;
   padding: .2em .8em;
-  border: .25rem solid rgb(240, 230, 230);
+  border: .25rem solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
-  background-color: rgb(29, 27, 39);
-  outline: .25rem solid #b7291a;
+  background-color: var(--clr-neutral-900);
+  outline: .25rem solid var(--clr-accent);
 }
 
 form {
   width: 70%;
   height: 400px;
   padding: 1em;
-  background-color: rgb(29, 27, 39);
-  border: .25rem solid rgb(240, 230, 230);
+  background-color: var(--clr-neutral-900);
+  border: .25rem solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
-  outline: .25rem solid #b7291a;
+  outline: .25rem solid var(--clr-accent);
 }
 
 .general-info {
@@ -84,9 +84,9 @@ input {
 fieldset {
   width: 50%;
   margin-inline: auto;
-  border: .05rem solid #b7291a;
+  border: .05rem solid var(--clr-accent);
   border-radius: var(--border-radius);
-  box-shadow: .05rem .5rem 2rem #b7291a;
+  box-shadow: .05rem .5rem 2rem var(--clr-accent);
 }
 
 .radio-box {
