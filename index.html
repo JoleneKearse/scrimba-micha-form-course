@@ -10,9 +10,19 @@
 <body>
   <h1>Collectibox</h1>
   <form>
-    <label for="name">Name: <input type="text" placeholder="John Doe"/></label>
-    <label for="email">Email: <input type="email" name="" id="" placeholder="happy@email.com"></label>
-    <label for="age">Age: <input type="number" name="" id="" placeholder="36"></label>
+    <div class="general-info">
+      <label for="name">Name: <input type="text" placeholder="John Doe" autofocus /></label>
+      <label for="email">Email: <input type="email" name="" id="email" placeholder="happy@email.com"></label>
+      <label for="age">Age: <input type="number" name="" id="age" placeholder="36"></label>
+    </div>
+
+    <fieldset>
+      <legend class="radio-label">What's your hat size?</legend>
+      <label for="smallSize" class="radio-box">Small <input type="radio" name="hatSize" id="smallSize" value="small"></label>
+      <label for="mediumSize" class="radio-box">Medium <input type="radio" name="hatSize" id="mediumSize" value="medium"></label>
+      <label for="largeSize" class="radio-box">Large <input type="radio" name="hatSize" id="largeSize" value="large"></label>
+      <label for="xLargeSize" class="radio-box">Extra Large <input type="radio" name="hatSize" id="xLargeSize" value="xLarge"></label>
+    </fieldset>
   </form>
 </body>
 </html>

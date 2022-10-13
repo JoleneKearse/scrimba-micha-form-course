@@ -28,17 +28,17 @@ input {
 /* ---------- TYPOGRAPHY ----------*/
 
 h1 {
-  background-color: rgb(29, 27, 39);
-  color: rgb(240, 230, 230);
   padding: .2em .8em;
   border: 1px solid rgb(240, 230, 230);
   border-radius: 6px;
+  background-color: rgb(29, 27, 39);
+  color: rgb(240, 230, 230);
 }
 
 /* ---------- LAYOUT ----------*/
 
 form {
-  display: inline-block;
+  /* display: inline-block; */
   width: 70%;
   height: 400px;
   padding: 1em;
@@ -46,19 +46,45 @@ form {
   color: rgb(240, 230, 230);
   border: 1px solid rgb(240, 230, 230);
   border-radius: 6px;
+  outline: 1px solid violet;
 }
 
-label {
-  display: grid;
-  grid-template-areas: 'label form form form form form form form form form form';
-  grid-template-columns: repeat(5, 1fr);
-  grid-area: label;
+.general-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   width: 70%;
+  margin-inline: auto;
+  margin-bottom: 1em;
 }
 
 input {
-  grid-area: form;
-  margin-inline: auto;
-  margin-bottom: 1em;
   padding: .25em;
+}
+
+fieldset {
+  width: 50%;
+  margin-inline: auto;
+}
+.radio-box {
+  display: grid;
+  grid-template-areas: "label radio";
+  grid-template-columns: 5.5em 1em;
+  grid-template-rows: 1fr;
+  margin-inline: auto;
+  padding: .5em;
+}
+
+.radio-box label {
+  grid-area: label;
+}
+
+.radio-box input {
+  grid-area: radio;
+}
+
+.radio-label {
+  text-align: center;
 }
