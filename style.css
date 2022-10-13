@@ -3,7 +3,8 @@
   --border-radius: .25em;
   --clr-neutral-100: rgb(240, 230, 230);
   --clr-neutral-900: rgb(29, 27, 39);
-  --clr-accent: #b7291a;
+  --clr-accent-1: #b7291a;
+  --clr-accent-2: #d4a449;
   --gap-sm: .25rem;
   --gap-med: .5rem;
   --gap-lg: 1em;
@@ -41,7 +42,8 @@ body {
 label,
 input,
 placeholder,
-select {
+select,
+button {
   font: inherit;
 }
 
@@ -69,7 +71,7 @@ h1 {
   border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
   background-color: var(--clr-neutral-900);
-  outline: var(--gap-sm) solid var(--clr-accent);
+  outline: var(--gap-sm) solid var(--clr-accent-1);
 }
 
 form {
@@ -78,7 +80,7 @@ form {
   background-color: var(--clr-neutral-900);
   border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
-  box-shadow: .05rem .5rem 2rem var(--clr-accent);
+  box-shadow: .05rem .5rem 2rem var(--clr-accent-1);
 }
 
 .general-info {
@@ -114,9 +116,9 @@ input {
 fieldset {
   width: 50%;
   margin-inline: auto;
-  border: .05rem solid var(--clr-accent);
+  border: .05rem solid var(--clr-accent-1);
   border-radius: var(--border-radius);
-  box-shadow: .05rem .5rem 2rem var(--clr-accent);
+  box-shadow: .05rem .5rem 2rem var(--clr-accent-1);
 }
 
 .radio-box {
@@ -141,9 +143,36 @@ fieldset {
 }
 
 input[type="radio"],
-select {
+select,
+button {
   cursor: pointer;
 }
+
+/* ---------- COMPONENTS ----------*/
+
+.btn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--gap-med);
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--clr-accent-2);
+  box-shadow: .05rem .5rem 2rem var(--clr-accent-2);
+  transition: all .5s;
+}
+
+.btn:hover,
+.btn:focus {
+  font-weight: bold;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-1);
+  box-shadow: .05rem .5rem 2rem var(--clr-accent-1);
+  transform: scale(1.05);
+}
+
+/* ---------- MEDIA QUERIES ----------*/
 
 @media (max-width: 450px) {
   .theme-select-group {
