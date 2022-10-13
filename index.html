@@ -11,20 +11,22 @@
   <h1>Collectibox</h1>
   <form>
     <div class="general-info">
-      <label for="name">Name: <input type="text" placeholder="John Doe" autofocus /></label>
-      <label for="email">Email: <input type="email" name="" id="email" placeholder="happy@email.com"></label>
-      <label for="age">Age: <input type="number" name="" id="age" placeholder="36"></label>
+      <label for="name">Name <input type="text" placeholder="John Doe" autofocus title="Your name"/></label>
+      <label for="email">Email <input type="email" name="" id="email" placeholder="happy@email.com" title="Your email"></label>
+      <label for="age">Age <input type="number" name="" id="age" placeholder="36" title="Your age"></label>
     </div>
 
-    <label for="theme">Choose a theme: <select name="theme" id="theme">
-      <optgroup>
-        <option value="">--Select theme--</option>
-        <option value="he-man">He-man</option>
-        <option value="transformers">Transformers</option>
-        <option value="carebears">Care Bears</option>
-        <option value="tmnt">Teenage Mutant Ninja Turtles</option>
-      </optgroup>
-    </select></label>
+    <div class="theme-select-group">
+      <label for="theme" id="theme-select">Choose a theme <select name="theme" id="theme" class="theme">
+        <optgroup>
+          <option value="">--Select theme--</option>
+          <option value="he-man" title="By the power of greyskull!">He-man</option>
+          <option value="transformers">Transformers</option>
+          <option value="carebears">Care Bears</option>
+          <option value="tmnt">Teenage Mutant Ninja Turtles</option>
+        </optgroup>
+      </select></label>
+    </div>
 
     <fieldset>
       <legend class="radio-label">What's your hat size?</legend>

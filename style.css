@@ -19,6 +19,13 @@
   box-sizing: border-box;
 }
 
+select,
+optgroup,
+option {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 100vw;
   background-image: url("https://images.unsplash.com/photo-1590708622734-b1b8df3c3576?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVjdGlibGVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
@@ -41,12 +48,17 @@ select {
 /* ---------- TYPOGRAPHY ----------*/
 
 h1, 
-form {
+form,
+#theme {
   color: var(--clr-neutral-100);
 }
 
 legend {
   font-size: 1.2rem;
+}
+
+#theme {
+  text-align: center;
 }
 
 /* ---------- LAYOUT ----------*/
@@ -82,6 +94,21 @@ form {
 
 input {
   padding: var(--gap-sm);
+  border-radius: var(--border-radius);
+}
+
+.theme-select-group {
+  /* position: absolute; */
+  width: 70%;
+  margin-inline: auto;
+  transform: translateX(25%);
+  margin-bottom: 2em;
+}
+
+.theme {
+  padding: var(--gap-sm);
+  border-radius: var(--border-radius);
+  background-color: #1d1b27e3;
 }
 
 fieldset {
@@ -90,11 +117,6 @@ fieldset {
   border: .05rem solid var(--clr-accent);
   border-radius: var(--border-radius);
   box-shadow: .05rem .5rem 2rem var(--clr-accent);
-}
-
-#theme {
-  margin-bottom: var(--gap-lg);
-  padding: var(--gap-sm);
 }
 
 .radio-box {
@@ -116,4 +138,27 @@ fieldset {
 
 .radio-label {
   text-align: center;
+}
+
+input[type="radio"],
+select {
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .theme-select-group {
+    transform: translateX(-15%);
+  }
+}
+
+@media (max-width: 700px) {
+  form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  form {
+    width: 95vw;
+  }
 }
