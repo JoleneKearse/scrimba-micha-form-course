@@ -33,7 +33,8 @@ body {
 
 label,
 input,
-placeholder {
+placeholder,
+select {
   font: inherit;
 }
 
