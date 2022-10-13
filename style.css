@@ -4,6 +4,9 @@
   --clr-neutral-100: rgb(240, 230, 230);
   --clr-neutral-900: rgb(29, 27, 39);
   --clr-accent: #b7291a;
+  --gap-sm: .25rem;
+  --gap-med: .5rem;
+  --gap-lg: 1em;
 }
 
 /* ---------- RESET ----------*/
@@ -48,22 +51,21 @@ legend {
 /* ---------- LAYOUT ----------*/
 
 h1 {
-  margin: 1em 0;
+  margin: var(--gap-lg) 0;
   padding: .2em .8em;
-  border: .25rem solid var(--clr-neutral-100);
+  border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
   background-color: var(--clr-neutral-900);
-  outline: .25rem solid var(--clr-accent);
+  outline: var(--gap-sm) solid var(--clr-accent);
 }
 
 form {
   width: 70%;
-  height: 400px;
-  padding: 1em;
+  padding: var(--gap-lg);
   background-color: var(--clr-neutral-900);
-  border: .25rem solid var(--clr-neutral-100);
+  border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
-  outline: .25rem solid var(--clr-accent);
+  box-shadow: .05rem .5rem 2rem var(--clr-accent);
 }
 
 .general-info {
@@ -71,14 +73,14 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: var(--gap-lg);
   width: 70%;
   margin-inline: auto;
-  margin-bottom: 1em;
+  margin-bottom: var(--gap-lg);
 }
 
 input {
-  padding: .25em;
+  padding: var(--gap-sm);
 }
 
 fieldset {
@@ -95,7 +97,7 @@ fieldset {
   grid-template-columns: 5.5em 1em;
   grid-template-rows: 1fr;
   margin-inline: auto;
-  padding: .5em;
+  padding: var(--gap-med);
 }
 
 .radio-box label {
