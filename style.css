@@ -170,6 +170,15 @@ button {
   cursor: pointer;
 }
 
+input:hover,
+input:focus,
+select:hover,
+select:focus,
+fieldset:hover,
+fieldset:focus {
+  border: .15rem solid var(--clr-accent-1);
+}
+
 /* ---------- COMPONENTS ----------*/
 
 .btn {
