@@ -20,15 +20,13 @@
   box-sizing: border-box;
 }
 
-select,
-optgroup,
-option {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
 }
 
 body {
   width: 100vw;
+  height: 100%;
   background-image: url("https://images.unsplash.com/photo-1590708622734-b1b8df3c3576?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVjdGlibGVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,6 +38,7 @@ placeholder,
 select,
 button {
   font: inherit;
+  font-size: 100%;
 }
 
 /* ---------- TYPOGRAPHY ----------*/
@@ -52,10 +51,6 @@ form,
 
 legend {
   font-size: 1.2rem;
-}
-
-#theme {
-  text-align: center;
 }
 
 /* ---------- LAYOUT ----------*/
@@ -102,16 +97,6 @@ form {
   margin-bottom: var(--gap-lg);
 }
 
-.general-info label {
-  /* grid-area: label; */
-  /* width: 10px; */
-}
-
-.general-info input {
-  /* grid-area: input; */
-  /* width: 40vw; */
-}
-
 input {
   padding: var(--gap-sm);
   border-radius: var(--border-radius);
@@ -131,6 +116,7 @@ input {
   margin-left: 0;
   margin-right: auto;
   padding: var(--gap-sm);
+  border: .05rem solid var(--clr-accent-2);
   border-radius: var(--border-radius);
   background-color: #1d1b27e3;
 }
@@ -196,13 +182,6 @@ button {
 }
 
 /* ---------- MEDIA QUERIES ----------*/
-
-/* @media (max-width: 450px) {
-  .general-info label {
-    text-align: center;
-  }
-} */
-
 
 @media (max-width: 700px) {
   form {
