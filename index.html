@@ -11,13 +11,20 @@
   <h1>Collectibox</h1>
   <form id="collectiboxForm">
     <div class="general-info">
-      <label for="name">Name <input type="text" id="name" placeholder="John Doe" autofocus title="Your name"/></label>
-      <label for="email">Email <input type="email" name="" id="email" placeholder="happy@email.com" title="Your email"></label>
-      <label for="age">Age  <input type="number" name="" id="age" placeholder="36" title="Your age"></label>
+      <label for="name">Name 
+        <input type="text" id="name" placeholder="John Doe" autofocus title="Your name" required/>
+      </label>
+      <label for="email">Email 
+        <input type="email" name="" id="email" placeholder="happy@email.com" title="Your email" required/>
+      </label>
+      <label for="age">Age  
+        <input type="number" name="" id="age" placeholder="36" title="Your age" required/>
+      </label>
     </div>
 
     <div class="theme-select-group">
-      <label for="theme" id="theme-select">Choose a theme <select name="theme" id="theme" class="theme">
+      <label for="theme" id="theme-select">Choose a theme 
+        <select name="theme" id="theme" class="theme" required>
         <optgroup>
           <option value="">--Select theme--</option>
           <option value="he-man" title="By the power of greyskull!">He-man</option>
@@ -30,10 +37,18 @@
 
     <fieldset>
       <legend class="radio-label">What's your hat size?</legend>
-      <label for="smallSize" class="radio-box">Small <input type="radio" name="hatSize" id="smallSize" value="small"></label>
-      <label for="mediumSize" class="radio-box">Medium <input type="radio" name="hatSize" id="mediumSize" value="medium"></label>
-      <label for="largeSize" class="radio-box">Large <input type="radio" name="hatSize" id="largeSize" value="large"></label>
-      <label for="xLargeSize" class="radio-box">Extra Large <input type="radio" name="hatSize" id="xLargeSize" value="xLarge"></label>
+      <label for="smallSize" class="radio-box">Small 
+        <input type="radio" name="hatSize" id="smallSize" value="small" required>
+      </label>
+      <label for="mediumSize" class="radio-box">Medium 
+        <input type="radio" name="hatSize" id="mediumSize" value="medium">
+      </label>
+      <label for="largeSize" class="radio-box">Large 
+        <input type="radio" name="hatSize" id="largeSize" value="large">
+      </label>
+      <label for="xLargeSize" class="radio-box">Extra Large 
+        <input type="radio" name="hatSize" id="xLargeSize" value="xLarge">
+      </label>
     </fieldset>
 
     <button class="btn">Get Your Collectibox!</button>
