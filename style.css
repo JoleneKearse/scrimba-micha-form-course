@@ -32,11 +32,6 @@ body {
   background-image: url("https://images.unsplash.com/photo-1590708622734-b1b8df3c3576?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVjdGlibGVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
 }
 
 label,
@@ -66,7 +61,8 @@ legend {
 /* ---------- LAYOUT ----------*/
 
 h1 {
-  margin: var(--gap-lg) 0;
+  width: fit-content;
+  margin: .5em auto;
   padding: .2em .8em;
   border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
@@ -75,8 +71,18 @@ h1 {
 }
 
 form {
-  width: 70%;
-  padding: var(--gap-lg);
+  display: grid;
+  grid-template-areas: 
+    "general"
+    "theme"
+    "hat"
+    "button";
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-inline: auto;
+  padding: 2em var(--gap-lg);
   background-color: var(--clr-neutral-900);
   border: var(--gap-sm) solid var(--clr-neutral-100);
   border-radius: var(--border-radius);
@@ -84,14 +90,26 @@ form {
 }
 
 .general-info {
+  grid-area: general;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-basis: 400px;
   gap: var(--gap-lg);
-  width: 70%;
+  margin: 0;
   margin-inline: auto;
   margin-bottom: var(--gap-lg);
+}
+
+.general-info label {
+  /* grid-area: label; */
+  /* width: 10px; */
+}
+
+.general-info input {
+  /* grid-area: input; */
+  /* width: 40vw; */
 }
 
 input {
@@ -100,25 +118,30 @@ input {
 }
 
 .theme-select-group {
-  /* position: absolute; */
-  width: 70%;
-  margin-inline: auto;
-  transform: translateX(25%);
+  grid-area: theme;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2em;
 }
 
 .theme {
+  margin-left: 0;
+  margin-right: auto;
   padding: var(--gap-sm);
   border-radius: var(--border-radius);
   background-color: #1d1b27e3;
 }
 
 fieldset {
+  grid-area: hat;
   width: 50%;
   margin-inline: auto;
   border: .05rem solid var(--clr-accent-1);
   border-radius: var(--border-radius);
-  box-shadow: .05rem .5rem 2rem var(--clr-accent-1);
+  box-shadow: .05rem .25rem .5rem var(--clr-accent-1);
 }
 
 .radio-box {
@@ -151,6 +174,7 @@ button {
 /* ---------- COMPONENTS ----------*/
 
 .btn {
+  grid-area: button;
   margin-top: 2em;
   margin-bottom: 2em;
   margin-left: auto;
@@ -168,17 +192,17 @@ button {
   font-weight: bold;
   color: var(--clr-neutral-100);
   background-color: var(--clr-accent-1);
-  box-shadow: .05rem .5rem 2rem var(--clr-accent-1);
   transform: scale(1.05);
 }
 
 /* ---------- MEDIA QUERIES ----------*/
 
-@media (max-width: 450px) {
-  .theme-select-group {
-    transform: translateX(-15%);
+/* @media (max-width: 450px) {
+  .general-info label {
+    text-align: center;
   }
-}
+} */
+
 
 @media (max-width: 700px) {
   form {
